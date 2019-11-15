@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+</head>
+<body>
+<div id="image_block">
+    <img id="hangman" />
+</div>
+<div id="in-game_elements">
+    <div id="letter_buttons_block">
+    </div>
+    <div id="answer_bank_block">
+        <p id="answer_bank"></p>
+    </div>
+    <div id="score_block">
+        <p id="score_label">Score: </p>
+        <p id="score_value">0</p>
+    </div>
+    <div id="lives_block">
+        <p id="lives_label">Lives: </p>
+        <p id="lives_value">7</p>
+    </div>
+</div>
+
+<div id="game_over">
+    <p id="game_over_text">GAME OVER</p>
+</div>
+<div id="restart_button">
+</div>
+
+
+<script>
+    let wordBank = ["committee", "jukebox", "sky", "difficult", "computer", "technology", "microsoft", "facebook",
+        "puzzle", "binder"];
+    let score = 0;
+    let lives = 7;
+    let answer_array;
+    let word;
+
+    function restart() {
+        resetStats();
+        resetButtonsPressed();
+        generateWord();
+        document.getElementById("game_over").style.display = "none";
+        document.getElementById("in-game_elements").style.display = "block";
+    }
+
+    function resetStats() {
+        answer_array = [];
+        score = 0;
+        lives = 7;
+        hangmanImgUpdate();
+        updateScoreLives();
+    }
+
+    function updateScoreLives() {
+        document.getElementById("score_value").innerHTML = score;
+        document.getElementById("lives_value").innerHTML = lives;
+    }
+
+    function updateAnswerBank() {
+        let answer_placement = "";
+        for (let i = 0; i < answer_array.length; i++) {
+            answer_placement += answer_array[i];
+        }
+        document.getElementById("answer_bank").innerHTML = answer_placement;
+        console.log("answer_array after update: " + answer_array); //testing
+    }
+
+    function generateWord() {
+        answer_array = [];
+        word = String(wordBank.splice(Math.floor(Math.random() * wordBank.length), 1)); //pop word from word bank
+        console.log("word: " + word); //testing purposes
+        let answer_placement = "";
+        for (let i = 0; i < word.length; i++) {
+            answer_array.push('_');
+            answer_placement += '_';
+        }
+        document.getElementById("answer_bank").innerHTML = answer_placement;
+        console.log("answer_array before update: " + answer_array); //testing
+    }
+
+    function letterButtons() {
+        for (let i = 0; i < 26; i++) {
+            let letter = String.fromCharCode(65 + i);
+            let letterButton = document.createElement("button");
+            letterButton.className = "letter_buttons";  //css purposes
+            letterButton.innerHTML = letter;
+            letterButton.onclick = checkGuess;
+            document.getElementById("letter_buttons_block").appendChild(letterButton);
+        }
+    }
+
+    function resetButtonsPressed() {
+        let buttons = document.getElementsByTagName("button");
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].disabled = false;
+        }
+    }
+
+    function checkGuess() {
+        this.disabled = true;   //disables button
+        let guess = this.innerHTML.toLowerCase();     //works
+        let answerFound = false;
+        for(let i = 0; i < word.length; i++) {
+            if (word[i] === guess) {
+                answer_array[i] = guess.toUpperCase();
+                score++;
+                answerFound = true;
+            }
+        }
+        if (!answerFound) {
+            lives--;
+            score--;
+        }
+        console.log("answer_array: " + answer_array);   //test
+        console.log(lives, score);  //test
+        updateScoreLives();
+        updateAnswerBank();
+        if (checkWordComplete()) {
+            generateWord();
+            resetButtonsPressed();
+        }
+        hangmanImgUpdate();
+        if (lives === 0) {
+            gameOver();
+        }
+    }
+
+    function gameOver() {
+        document.getElementById("in-game_elements").style.display = "none";
+        document.getElementById("game_over_text").style.display = "block";
+    }
+
+    function checkWordComplete() {
+        let word_complete = true;
+        for (let i = 0; i < answer_array.length; i++) {
+            if (answer_array[i] === '_') {
+                word_complete = false;
+                break;
+            }
+        }
+        return word_complete;
+    }
+
+    function restartButton() {
+        let restart_button = document.createElement("BUTTON");
+        restart_button.innerHTML = "Restart";
+        restart_button.onclick = function() {
+            restart();
+        };
+        document.getElementById("restart_button").appendChild(restart_button);
+    }
+
+    function hangmanImgUpdate() {
+        document.getElementById("hangman").setAttribute("height", "400px");
+        document.getElementById("hangman").src = "images/" + String(lives) + ".jpg";
+    }
+
+    function main() {
+        document.getElementById("game_over_text").style.display = "none";
+        hangmanImgUpdate();
+        restartButton();
+        generateWord();
+        letterButtons();
+    }
+
+main();
+
+</script>
+
+</body>
+</html>
