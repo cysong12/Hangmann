@@ -1,0 +1,102 @@
+ #highscores{
+    font-size: 20px;
+    
+    border-color:black;
+    margin:auto;
+    position:absolute;
+    margin-left:18%;
+    
+}
+#start_button{
+    font-size: 20px;
+    border-color:black;
+    margin:auto;
+    position:aboslut;
+    /* margin-left:40%; */
+
+}
+.letter_buttons{
+margin:2px;
+border-color:green;
+font-size: 20px;
+background-color:olivedrab;
+margin-top: 5%;
+} 
+
+#food{
+    font-size:10px;
+    border-color:black;
+     
+    font-size:20px;
+}
+ #brands{
+    font-size:10px;
+    border-color:black;
+     
+    font-size:20px;
+}
+#fruits{
+    
+    border-color:black;
+     
+    font-size:20px;
+}
+#countries{
+    font-size:10px;
+    border-color:black; 
+     
+     font-size:20px; 
+    
+ }  
+ 
+#gallows {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/351081/gallows.png);
+    
+    width: 484px;
+    height: 520px;
+  
+    position:absolute;
+    margin-top:-480px;
+    margin-left:20px;
+}
+ #image_block{
+    margin-left:280px; 
+    margin-top:20%;
+    position:relative;
+ } 
+ #score_block{
+    font-size:30px;
+    margin-top:-470px;
+    margin-left:5%;
+} 
+ #lives_block{
+    font-size:30px;
+    
+    margin-left:5%;
+} 
+ #game_over{
+    font-size:20px;
+    margin-top:200px;
+    margin-left:10%;
+
+} 
+#in-game_elements{
+    margin-top:50px;
+}
+#answerPlacement{
+    margin-top:-100px;
+}
+.restart_button{
+    font-size:10px;
+    border-color:black; 
+    position:absolute;
+    margin-top:-400px;
+    font-size:20px; 
+    
+}
+
+
+#answer_bank{
+    position: absolute;
+    top: 50px;
+    } 
