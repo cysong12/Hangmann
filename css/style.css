@@ -1,22 +1,22 @@
-#start_page{
-    height:100%;
-    width:100%;
+#start_page {
+    height: 100%;
+    width: 100%;
     z-index: -1;
-    position:absolute
-
+    position: absolute
 }
 
-#highscores{
-     border-color:black;
-     font-size: 50px;
- }
-
-#start_button{
-    border-color:black;
+#highscores {
+    border-color: black;
     font-size: 50px;
 }
 
-#startingbuttons, #categories {
+#start_button {
+    border-color: black;
+    font-size: 50px;
+}
+
+#startingbuttons,
+#categories {
     position: absolute;
     text-align: center;
     margin-left: auto;
@@ -27,86 +27,61 @@
     white-space: pre-line;
 }
 
-.letter_buttons{
-    border-color:green;
+.letter_buttons {
+    border-color: green;
+    font-size: 35px;
+    background-color: olivedrab;
+    margin: 5px 5px;
+}
+
+#sports,
+#brands,
+#countries,
+#food {
+    font-size: 30px;
+    border-color: black;
+}
+
+#image_block {
+    margin-left: 30%;
+    margin-top: 20%;
+    position: relative;
+}
+
+#score_block {
+    font-size: 30px;
+    margin-top: -750px;
+    margin-left: 2%;
+}
+
+#lives_block {
+    font-size: 30px;
+    margin-left: 2%;
+}
+
+#game_over {
     font-size: 20px;
-    background-color:olivedrab;
-    margin: 5% 2px 2px;
-} 
-#sports{
-    font-size:30px;
-    border-color:black;
-    
-}
-#food{
-    font-size:30px;
-    border-color:black;
-    
-}
- #brands{
-    font-size:30px;
-    border-color:black;
-    
-    
-}
-#fruits{
-    
-    border-color:black;
-    font-size:30px;
-
-}
-#countries{
-    
-    border-color:black; 
-    font-size:30px; 
-
- }  
- 
-#gallows {
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/351081/gallows.png);
-    width: 484px;
-    height: 520px;
-    position:absolute;
-    margin-top:-480px;
-    margin-left:20px;
-}
- #image_block{
-    margin-left:280px; 
-    margin-top:20%;
-    position:relative;
- } 
- #score_block{
-    font-size:30px;
-    margin-top:-470px;
-    margin-left:5%;
-} 
- #lives_block{
-    font-size:30px;
-    
-    margin-left:5%;
-} 
- #game_over{
-    font-size:20px;
-    margin-top:200px;
-    margin-left:10%;
-
-} 
-#in-game_elements{
-    margin-top:50px;
-}
-#answerPlacement{
-    margin-top:-100px;
-}
-.restart_button{
-    border-color:black; 
-    position:absolute;
-    margin-top:-400px;
-    font-size:20px; 
-    
+    margin-top: 200px;
+    margin-left: 10%;
 }
 
+#in-game_elements {
+    margin-top: 50px;
+}
 
-#answer_bank{
-    position: absolute;
-    top: 50px;
-    } 
+#answerPlacement {
+    margin-top: -100px;
+}
+
+.restart_button {
+    border-color: black;
+    position: relative;
+    font-size: 20px;
+    bottom: 250px;
+}
+
+#answer_bank {
+    position: relative;
+    word-spacing: 15px;
+    /* top: 150px; */
+}
