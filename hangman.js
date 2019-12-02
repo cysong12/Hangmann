@@ -277,7 +277,7 @@
         }
         if (!answerFound) {
             lives--;
-            wrongSound.play()
+            wrongSound.play();
             score--;
         }
         console.log("answer_array: " + wordBank.linesArray); //test
@@ -294,8 +294,19 @@
             gameOver();
         }
     }
+    let explosion = new Audio("explosion.wav");
+    let gameOverImgRef = document.getElementById("game_over_img");
+    gameOverImgRef.src = "images/nuclear.gif";
+    function gameOverMedia() {
+        explosion.play();
+        gameOverImgRef.style.display = "block";
+        setTimeout(function() {
+            gameOverImgRef.style.display = "none";
+        }, 2000);
+    }
 
     function gameOver() {
+        gameOverMedia();
         document.getElementById("game_play").style.display = "none";
         document.getElementById("game_over").style.display = "block";
     }
