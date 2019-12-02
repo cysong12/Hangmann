@@ -14,7 +14,10 @@
     border-color: black;
     font-size: 50px;
 }
-
+#hint_block{
+    
+    position:absolute;
+}
 #startingbuttons,
 #categories {
     position: absolute;
