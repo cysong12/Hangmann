@@ -1,6 +1,4 @@
-src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"
-src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"
-src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"
+
 
     // Your web app's Firebase configuration
     let firebaseConfig = {
