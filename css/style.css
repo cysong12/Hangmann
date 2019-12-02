@@ -96,7 +96,7 @@
 }
 
 #restart {
-    position: absolute;
-    top: 2%;
+    position: relative;
+    top: 15px;
     left: 2%;
 }
