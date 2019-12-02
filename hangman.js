@@ -286,7 +286,7 @@
     }
 
     function gameOver() {
-        document.getElementById("in-game_elements").style.display = "none";
+        document.getElementById("game_play").style.display = "none";
         document.getElementById("game_over").style.display = "block";
     }
 
