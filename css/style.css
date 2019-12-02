@@ -56,7 +56,7 @@
 
 #score_block {
     font-size: 30px;
-    margin-top: -700px;
+    margin-top: -650px;
     margin-left: 2%;
 }
 
@@ -85,7 +85,8 @@
 }
 
 #answer_bank {
-    word-spacing: 15px;
+    letter-spacing: 5px;
+    font-size: 16px;
 }
 
 #answer_bank_block {
