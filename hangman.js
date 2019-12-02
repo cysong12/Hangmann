@@ -20,6 +20,33 @@
     let answer_array;
     let word;
     let wordBank; //category.innerHTML
+    let hint_counter;
+
+    function giveHints() {
+        if (hint_counter >= 1) {
+            hint_counter--;
+            document.getElementById("hintAlert").innerHTML = "Filled 2 letters!";
+            wordLength = word.length;
+            let j = 0;
+            for (let i = 0; i < word.length; i++) {
+                if (wordBank.linesArray[i] === '_') {
+                    wordBank.linesArray[i] = word[i];
+                    updateAnswerBank();
+                    if (wordBank.checkWordComplete()) {
+                        generateWord(category);
+                        resetButtonsPressed();
+                    }
+                    j++;
+                }
+                if (j === 2) {
+                    break;
+                }
+            }
+        } else {
+            document.getElementById("hintAlert").innerHTML = "No more hints left!";
+        }
+        document.getElementById("hintCounter").innerHTML = "Number of hints: " + hint_counter;
+    }
 
     function highscoreDB() {
         document.getElementById("userScore").innerHTML = "Your score is " + score + " (" + wordBank.category + ")";
@@ -133,14 +160,14 @@
                 "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Haiti",
                 "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iraq", "Ireland",
                 "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya",
-                "Kosovo", "Kuwait", "Kyrgyzstan", "Latvia", "Lebanon", "Lesotho", "Liberia",
+                "Kosovo", "Kuwait", "Latvia", "Lebanon", "Lesotho", "Liberia",
                 "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malaysia", "Maldives",
                 "Mali", "Mexico",
-                "Monaco", "Mongolia", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands",
-                "New Zealand", "Nicaragua", "Niger", "Nigeria", "Niue",
+                "Monaco", "Mongolia", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nepal", "Netherlands",
+                "New Zealand", "Nicaragua", "Niger", "Nigeria", 
                 "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal",
                 "Puerto Rico", "Qatar", "Romania", "Russian", "Rwanda",
-                "Samoa", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Sierra Leone", "Singapore", "Slovakia", "Slovenia",
+                "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Sierra Leone", "Singapore", "Slovakia", "Slovenia",
                 "South Africa", "South Sudan", "Spain", "Sri Lanka",
                 "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland",
                 "Taiwan", "Tajikistan", "Thailand", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey",
@@ -351,6 +378,7 @@
     }
     letterButtons();
     function main() {
+        hint_counter = 3;
         hangmanImgUpdate();
         wordBank = new Word(category);
         generateWord();
