@@ -37,7 +37,7 @@
 
 #letter_buttons_block {
     position: absolute;
-    margin-top:300px;
+    top:500px;
     
 }
 
@@ -57,7 +57,7 @@
 
 #score_block {
     font-size: 30px;
-    /* margin-top: 50px; */
+    
     margin-left: 2%;
     position:absolute;
     
@@ -67,7 +67,7 @@
     font-size: 30px;
     margin-left: 2%;
     position:absolute;
-    Top:200px;
+    Top:250px;
 }
 
 #game_over {
@@ -103,13 +103,12 @@
 
 #answer_bank_block {
     position: absolute;
-    Top:280px;
+    Top:380px;
     letter-spacing: 5px;
     font-size: 36px;
 }
 
- 
- 
+
 #cat1{
     position:absolute;
     margin-left:50px;
