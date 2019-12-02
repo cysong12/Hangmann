@@ -5,19 +5,17 @@
     <meta charset="UTF-8">
     <title>Hangman</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
 </head>
 
 <body>
-    <div id="start_screen">
         <!--    <img src = "rope.png" id ="start_page">-->
-        <div id="startingbuttons">
+    <div id="startingbuttons">
             <button id="start_button" onclick="clickedStart();">Start Game</button>
             <button id="highscores" onclick="highScoreDisplay();">High Scores</button>
-        </div>
     </div>
     <div id="categories">
             <button id="sports" onclick="clickedCategory(this);">Sports</button>
