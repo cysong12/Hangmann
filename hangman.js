@@ -264,6 +264,7 @@
     }
 
     function checkGuess() {
+        let wrongSound = new Audio("jayOuch.m4a");
         this.disabled = true; //disables button
         let guess = this.innerHTML.toUpperCase(); //works
         let answerFound = false;
@@ -276,6 +277,7 @@
         }
         if (!answerFound) {
             lives--;
+            wrongSound.play()
             score--;
         }
         console.log("answer_array: " + wordBank.linesArray); //test
