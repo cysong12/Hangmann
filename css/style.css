@@ -31,7 +31,13 @@
     border-color: green;
     font-size: 4vh;
     background-color: olivedrab;
-    margin: 5px 5px;
+    margin: 5px;
+
+}
+
+#letter_buttons_block {
+    position: relative;
+    bottom: 75px;
 }
 
 #sports,
@@ -44,13 +50,13 @@
 
 #image_block {
     margin-left: 30%;
-    margin-top: 15%;
+    margin-top: 10%;
     position: relative;
 }
 
 #score_block {
     font-size: 30px;
-    margin-top: -750px;
+    margin-top: -700px;
     margin-left: 2%;
 }
 
@@ -77,11 +83,15 @@
     border-color: black;
     position: relative;
     font-size: 20px;
-    bottom: 250px;
+    bottom: 200px;
 }
 
 #answer_bank {
-    position: relative;
     word-spacing: 15px;
-    /* top: 150px; */
+}
+
+#answer_bank_block {
+    position: relative;
+    bottom: 100px;
+
 }

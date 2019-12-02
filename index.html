@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+</head>
+
+<body>
+    <div id="start_screen">
+        <!--    <img src = "rope.png" id ="start_page">-->
+        <div id="startingbuttons">
+            <button id="start_button" onclick="clickedStart();">Start Game</button>
+            <button id="highscores" onclick="highScoreDisplay();">High Scores</button>
+        </div>
+
+        <div id="categories">
+            <button id="sports" onclick="clickedCategory(this);">Sports</button>
+            <button id="brands" onclick="clickedCategory(this);">Brands</button>
+            <button id="countries" onclick="clickedCategory(this);">Countries</button>
+            <button id="food" onclick=clickedCategory(this);>Food</button>
+        </div>
+    </div>
+    <div id="game_play">
+        <div id="image_block">
+            <img id="hangman" />
+        </div>
+        <div id="in-game_elements">
+            <div id="answer_bank_block">
+                <p id="answer_bank"></p>
+            </div>
+            <div id="letter_buttons_block">
+            </div>
+
+            <div id="score_block">
+                <p id="score_label">Score: </p>
+                <p id="score_value">0</p>
+            </div>
+            <div id="lives_block">
+                <p id="lives_label">Lives: </p>
+                <p id="lives_value">7</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="game_over">
+        <p id="game_over_text">GAME OVER</p>
+        <input id="name" type="text" value="Rick Sanchez" />
+        <button id="submit" onclick="highscoreDB();">Submit</button>
+    </div>
+    <div id="highScoreDisplay">
+        <p id="userScore"></p>
+        <div id="highScoreCategories">
+            <!--highscore displayed here. do not delete-->
+            <div id="cat1Block">
+                <h1 id="cat1">Sports</h1>
+                <div id="cat1NameScores">
+                </div>
+            </div>
+            <div id="cat2Block">
+                <h1 id="cat2">Brands</h1>
+                <div id="cat2NameScores">
+                </div>
+            </div>
+            <div id="cat3Block">
+                <h1 id="cat3">Countries</h1>
+                <div id="cat3NameScores">
+                </div>
+            </div>
+            <div id="cat4Block">
+                <h1 id="cat4">Food</h1>
+                <div id="cat4NameScores">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="restart_button"></div>
+    <script type="text/javascript" src="hangman.js"></script>
+</body>
+
+</html>
