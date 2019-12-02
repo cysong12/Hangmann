@@ -69,7 +69,11 @@
     position:absolute;
     Top:200px;
 }
+#hint_block{
+    font-size: 20px;
+    top:300px;
 
+}
 #game_over {
     font-size: 20px;
     margin-top: 200px;
