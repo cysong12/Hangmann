@@ -317,7 +317,7 @@
 
     function gameOver() {
         gameOverMedia();
-        document.getElementById("correctAnswer").innerHTML = wordBank.answer;
+        document.getElementById("correctAnswer").innerHTML = "Answer: " + wordBank.answer;
         document.getElementById("userScore").innerHTML = "Your score is " + score + " (" + wordBank.category + ")";
         document.getElementById("userScore").style.display = "block";
         document.getElementById("game_play").style.display = "none";
