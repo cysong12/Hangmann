@@ -48,7 +48,7 @@
     }
 
     function readStoreHsByCat() {
-        //read top 10 names by category
+        //delete children nodes for dupes if player keeps playing
         let cat1Node = document.getElementById("cat1NameScores");
         let cat2Node = document.getElementById("cat2NameScores");
         let cat3Node = document.getElementById("cat3NameScores");
@@ -57,6 +57,7 @@
         for (let i = 0; i < 4; i++) {
             cats[i].innerHTML = "";
         }
+        //read top 10 names by category
         db.collection("names").where("category", "==", "sports").orderBy("score", "desc").limit(10).get().then(function(querySnapshot) {
             querySnapshot.forEach(function(doc) {
                 pNameElem = document.createElement("P");
@@ -316,6 +317,7 @@
 
     function gameOver() {
         gameOverMedia();
+        document.getElementById("correctAnswer").innerHTML = wordBank.answer;
         document.getElementById("userScore").innerHTML = "Your score is " + score + " (" + wordBank.category + ")";
         document.getElementById("userScore").style.display = "block";
         document.getElementById("game_play").style.display = "none";
