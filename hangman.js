@@ -42,9 +42,8 @@
 
     function highScoreDisplay() {
         document.getElementById("highScoreDisplay").style.display = "block";
-        document.getElementById("highScoreDisplay").style.display = "block";
-        document.getElementById("highScoreDisplay").style.display = "block";
-        document.getElementById("highScoreDisplay").style.display = "block";
+        document.getElementById("startingbuttons").style.display = "none";
+        document.getElementById("game_over").style.display = "none";
         readStoreHsByCat();
     }
 
@@ -203,10 +202,11 @@
     function restart() {
         resetStats();
         resetButtonsPressed();
-        startScreenDisplay();
         document.getElementById("game_over").style.display = "none";
         document.getElementById("game_play").style.display = "none";
         document.getElementById("highScoreDisplay").style.display = "none";
+        document.getElementById("startingbuttons").style.display = "block";
+        startScreenDisplay();
     }
 
     function resetStats() {
@@ -290,16 +290,6 @@
         document.getElementById("game_over").style.display = "block";
     }
 
-    function restartButton() {
-        let restart_button = document.createElement("BUTTON");
-        restart_button.innerHTML = "Restart";
-        restart_button.className = "restart_button"
-        restart_button.onclick = function() {
-            restart();
-        };
-        document.getElementById("restart_button").appendChild(restart_button);
-    }
-
     function hangmanImgUpdate() {
         document.getElementById("hangman").setAttribute("height", "400px");
         document.getElementById("hangman").src = "images/" + String(lives) + ".jpg";
@@ -307,7 +297,7 @@
 
     function clickedCategory(elem) {
         document.getElementById("game_play").style.display = "block";
-        document.getElementById("start_screen").style.display = "none";
+        document.getElementById("categories").style.display = "none";
         category = elem.textContent;
         // console.log(category, typeof(category)); 
         main();
@@ -315,22 +305,20 @@
 
     function clickedStart() {
         document.getElementById("categories").style.display = "block";
-        document.getElementById("start_button").style.display = "none";
-        document.getElementById("highscores").style.display = "none";
+        document.getElementById("startingbuttons").style.display = "none";
     }
 
     function startScreenDisplay() {
+        //document.getElementById("start_screen").style.display = "block";
         document.getElementById("game_over").style.display = "none";
         document.getElementById("game_play").style.display = "none";
         document.getElementById("categories").style.display = "none";
         document.getElementById("highScoreDisplay").style.display = "none";
-        restartButton();
     }
     letterButtons();
     function main() {
         hangmanImgUpdate();
         wordBank = new Word(category);
         generateWord();
-        
     }
     startScreenDisplay();

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Hangman</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="css/style.css">-->
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
@@ -18,13 +18,12 @@
             <button id="start_button" onclick="clickedStart();">Start Game</button>
             <button id="highscores" onclick="highScoreDisplay();">High Scores</button>
         </div>
-
-        <div id="categories">
+    </div>
+    <div id="categories">
             <button id="sports" onclick="clickedCategory(this);">Sports</button>
             <button id="brands" onclick="clickedCategory(this);">Brands</button>
             <button id="countries" onclick="clickedCategory(this);">Countries</button>
             <button id="food" onclick=clickedCategory(this);>Food</button>
-        </div>
     </div>
     <div id="game_play">
         <div id="image_block">
@@ -79,7 +78,9 @@
             </div>
         </div>
     </div>
-    <div id="restart_button"></div>
+    <div id="restart">
+        <button id="restartButton" onclick="restart();">Restart</button>
+    </div>
     <script type="text/javascript" src="hangman.js"></script>
 </body>
 
