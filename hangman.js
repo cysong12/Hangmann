@@ -308,14 +308,14 @@
 
     function gameOver() {
         gameOverMedia();
+        document.getElementById("userScore").innerHTML = "Your score is " + score + " (" + wordBank.category + ")";
+        document.getElementById("userScore").style.display = "block";
         document.getElementById("game_play").style.display = "none";
         document.getElementById("game_over").style.display = "block";
     }
 
     function hangmanImgUpdate() {
         document.getElementById("hangman").setAttribute("height", "400px");
-        document.getElementById("userScore").innerHTML = "Your score is " + score + " (" + wordBank.category + ")";
-        document.getElementById("userScore").style.display = "block";
         document.getElementById("hangman").src = "images/" + String(lives) + ".jpg";
     }
 
