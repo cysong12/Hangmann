@@ -22,7 +22,7 @@
     let wordBank; //category.innerHTML
 
     function highscoreDB() {
-        document.getElementById("userScore").innerHTML = "Your score is " + score + "(" + wordBank.category + ")";
+        document.getElementById("userScore").innerHTML = "Your score is " + score + " (" + wordBank.category + ")";
         let name = document.getElementById("name").value;
         db.collection("names").add({
             name: name,
@@ -313,6 +313,7 @@
 
     function hangmanImgUpdate() {
         document.getElementById("hangman").setAttribute("height", "400px");
+        document.getElementById("userScore").innerHTML = "Your score is " + score + " (" + wordBank.category + ")";
         document.getElementById("hangman").src = "images/" + String(lives) + ".jpg";
     }
 
