@@ -34,15 +34,15 @@
     border-color: green;
     font-size: 4vh;
     background-color: olivedrab;
-    margin: 5px;
+    /* margin: 5px; */
 
 }
 
-#letter_buttons_block {
+/* #letter_buttons_block {
     position: absolute;
     top:500px;
     
-}
+} */
 
 #sports,
 #brands,
@@ -52,45 +52,38 @@
     border-color: black;
 }
 
-#image_block {
+/* #image_block {
     left:180px;
     Top:10px;
     position: absolute;
-}
+} */
 
 #score_block {
-    font-size: 20px;
-    
-    margin-left: 2%;
-    position:absolute;
-    
+    font-size: 4vh;
 }
 
-#lives_block {
-    font-size: 20px;
-    margin-left: 2%;
-    position:absolute;
-    Top:200px;
+ #lives_block {
+    font-size: 4vh;
 }
+
 #hint_block{
-    font-size: 20px;
-    top:300px;
-
+    font-size: 4vh;
 }
+
 #game_over {
     font-size: 20px;
     margin-top: 200px;
     margin-left: 10%;
 }
 
-#in-game_elements {
+/* #in-game_elements {
     margin-top: 50px;
-}
+} */
 
-#answerPlacement {
+/* #answerPlacement {
     margin-top: 100px;
     position:absolute;
-}
+} */
 
 #restartButton {
     border-color: black;
@@ -105,14 +98,14 @@
 }
 
 #answer_bank {
-    word-spacing: 2px;
+    word-spacing: 2vh;
 }
 
 #answer_bank_block {
-    position: absolute;
-    Top:380px;
+    /* position: absolute;
+    Top:380px; */
     letter-spacing: 5px;
-    font-size: 36px;
+    font-size: 4vh;
 }
 
 
