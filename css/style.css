@@ -79,21 +79,27 @@
     margin-top: -100px;
 }
 
-.restart_button {
+#restartButton {
     border-color: black;
-    position: relative;
     font-size: 20px;
     bottom: 200px;
 }
 
+#restart {
+    position: relative;
+    top: 15px;
+    left: 2%;
+}
+
 #answer_bank {
-    word-spacing: 15px;
+    word-spacing: 2px;
 }
 
 #answer_bank_block {
     position: relative;
     bottom: 100px;
-
+    letter-spacing: 5px;
+    font-size: 36px;
 }
 
  
@@ -166,4 +172,14 @@
     margin-left:470px; 
     margin-top:150px;
 
-}  
+}
+
+#game_over_text {
+    font-size: 50px;
+
+}
+
+#name, #submit {
+    font-size: 18px;
+
+}
