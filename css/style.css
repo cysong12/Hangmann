@@ -103,31 +103,29 @@
 }
 
  
+ 
 #cat1{
     position:absolute;
     margin-left:50px;
-    margin-top:100px;
+    margin-top:50px;
 }
 #cat2{
     position:absolute;
     margin-left:170px;
-    margin-top:100px;
+    margin-top:50px;
 }
 
 #cat3{
     position:absolute;
-    margin-left:290px;
-    margin-top:100px;
+    margin-left:20px;
+    margin-top:500px;
 }
 #cat4{
     position:absolute;
-    margin-left:450px;
-    margin-top:100px;
+    margin-left:200px;
+    margin-top:500px;
 }
-/* .sportsName{
-    position:absolute;
-     margin-top:100px;
-}  */
+
  .sportsScore{
     position:absolute;
     margin-top:-30px;
@@ -136,7 +134,7 @@
   #cat1NameScores{
     position:absolute;
     margin-left:0px; 
-    margin-top:150px;
+    margin-top:100px;
   }
 .brandsScore{
     position:absolute;
@@ -147,7 +145,7 @@
 #cat2NameScores{
     position:absolute;
     margin-left:190px;
-    margin-top:150px;   
+    margin-top:100px;   
 }
 .countriesScore{
     position:absolute;
@@ -157,8 +155,8 @@
 } 
 #cat3NameScores{
     position:absolute;
-    margin-left:320px; 
-    margin-top:150px;
+    margin-left:20px; 
+    margin-top:550px;
 
 } 
 .foodScore{
@@ -169,8 +167,8 @@
 } 
 #cat4NameScores{
     position:absolute;
-    margin-left:470px; 
-    margin-top:150px;
+    margin-left:190px; 
+    margin-top:550px;
 
 }
 
