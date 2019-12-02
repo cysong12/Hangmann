@@ -14,10 +14,10 @@
     border-color: black;
     font-size: 50px;
 }
-#hint_block{
+/* #hint_block{
     
     position:absolute;
-}
+} */
 #startingbuttons,
 #categories {
     position: absolute;
@@ -34,7 +34,7 @@
     border-color: green;
     font-size: 4vh;
     background-color: olivedrab;
-    /* margin: 5px; */
+    margin: 5px;
 
 }
 
@@ -66,9 +66,9 @@
     font-size: 4vh;
 }
 
-#hint_block{
+/* #hint_block{
     font-size: 4vh;
-}
+} */
 
 #game_over {
     font-size: 20px;
@@ -98,7 +98,7 @@
 }
 
 #answer_bank {
-    word-spacing: 2vh;
+    word-spacing:2vh;
 }
 
 #answer_bank_block {
