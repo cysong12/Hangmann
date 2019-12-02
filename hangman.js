@@ -164,7 +164,7 @@
 
         this.answerPlacement = function() {
             this.answer_placement = "";
-            console.log(this.linesArray);
+            //console.log(this.linesArray);
             for (let i = 0; i < this.linesArray.length; i++) {
                 if (this.linesArray[i] === ' ') {
                     this.answer_placement += ' ';
@@ -175,22 +175,22 @@
             return this.answer_placement;
         };
         this.checkWordComplete = function() {
-            console.log(this.answer_placement === this.answer);
+            //console.log(this.answer_placement === this.answer);
             if (this.answer_placement === this.answer) {
                 return true;
             }
         };
         this.nextCategory = function() {
             this.category = Object.keys(wordBank)[Math.floor(Math.random() * Object.keys(wordBank).length)]; // tested
-            console.log(this.category);
+            //console.log(this.category);
             return wordBank[this.category];
         };
         this.popWord = function() {
             this.answerArray = [];
-            console.log(this.wordBank, this.category);
+            //console.log(this.wordBank, this.category);
             if (this.wordBank.length === 0) { // if category key's value is empty, delete it
                 delete wordBank[this.category];
-                console.log(wordBank);
+                //console.log(wordBank);
                 this.wordBank = this.nextCategory();
             }
             let generated_i = Math.floor(Math.random() * (this.wordBank.length));
@@ -211,7 +211,7 @@
                 }
                 //this.answerPlacement += '_';
             }
-            console.log(this.answer, this.answerArray);
+            //console.log(this.answer, this.answerArray);
             return generated_word;
         };
     }
@@ -242,17 +242,17 @@
 
     function updateAnswerBank() {
         document.getElementById("answer_bank").innerHTML = wordBank.answerPlacement();
-        console.log("answer_array after update: " + wordBank.linesArray); //testing
+        //console.log("answer_array after update: " + wordBank.linesArray); //testing
     }
 
     function generateWord(category) { // category === onclick elem
-        console.log(category, "HEY");
+        console.log("NICE TRY, NO CHEATS");
         word = wordBank.popWord();
         let answerPlacement = wordBank.answerPlacement();
 
-        console.log(word, answerPlacement);
+        //console.log(word, answerPlacement);
         document.getElementById("answer_bank").innerHTML = answerPlacement;
-        console.log("answer_array before update: " + wordBank.linesArray); //testing
+        //console.log("answer_array before update: " + wordBank.linesArray); //testing
     }
 
     function letterButtons() {
@@ -290,11 +290,11 @@
             wrongSound.play();
             score--;
         }
-        console.log("answer_array: " + wordBank.linesArray); //test
-        console.log(lives, score); //test
+        //console.log("answer_array: " + wordBank.linesArray); //test
+        //console.log(lives, score); //test
         updateScoreLives();
         updateAnswerBank();
-        console.log(wordBank.checkWordComplete());
+        //console.log(wordBank.checkWordComplete());
         if (wordBank.checkWordComplete()) {
             generateWord(category);
             resetButtonsPressed();
