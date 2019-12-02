@@ -56,7 +56,7 @@
 }
 
 #score_block {
-    font-size: 30px;
+    font-size: 20px;
     
     margin-left: 2%;
     position:absolute;
@@ -64,10 +64,10 @@
 }
 
 #lives_block {
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 2%;
     position:absolute;
-    Top:250px;
+    Top:200px;
 }
 
 #game_over {
