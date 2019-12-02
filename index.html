@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Hangman</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet"  href="css/style.css">-->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <div id="start_screen">
-<!--    <img src = "rope.png" id ="start_page">-->
+    <!--    <img src = "rope.png" id ="start_page">-->
     <div id="startingbuttons">
         <button id="start_button" onclick="clickedStart();">Start Game</button>
         <button id="highscores" onclick="highScoreDisplay();">High Scores</button>
     </div>
-    
+
     <div id="categories">
         <button id="sports" onclick="clickedCategory(this);">Sports</button>
         <button id="brands" onclick="clickedCategory(this);">Brands</button>
@@ -27,11 +28,12 @@
     </div>
     <div id="gallows"></div>
     <div id="in-game_elements">
-        <div id="letter_buttons_block">
-        </div>
         <div id="answer_bank_block">
             <p id="answer_bank"></p>
         </div>
+        <div id="letter_buttons_block">
+        </div>
+
         <div id="score_block">
             <p id="score_label">Score: </p>
             <p id="score_value">0</p>
@@ -89,7 +91,7 @@
 
 
 <script>
-  // Your web app's Firebase configuration
+    // Your web app's Firebase configuration
     let firebaseConfig = {
         apiKey: "AIzaSyACMZdQoxFJogdRsoOtPbSUxAbPVFPDZ4Y",
         authDomain: "hangman-highscore.firebaseapp.com",
@@ -118,16 +120,17 @@
             score: score,
             category: wordBank.category
         })
-    
+
         .then(function() { // display message on console when the document is successfully added 
-                    console.log("success!");
-        })
-        .catch(function() { // display an error message on console when document could not be added
-                    console.error("error!");
-        })
-        
+                console.log("success!");
+            })
+            .catch(function() { // display an error message on console when document could not be added
+                console.error("error!");
+            })
+
         highScoreDisplay();
     }
+
     function highScoreDisplay() {
         document.getElementById("highScoreDisplay").style.display = "block";
         readStoreHsByCat();
@@ -135,96 +138,102 @@
 
     function readStoreHsByCat() {
         //read top 10 names by category
-        db.collection("names").where("category", "==", "sports").orderBy("score", "desc").limit(10).get().then(function (querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-            pNameElem = document.createElement("P");
-            pScoreElem = document.createElement("P");
-            pNameElem.innerHTML = doc.data().name;
-            pScoreElem.innerHTML = doc.data().score;
-            document.getElementById("cat1NameScores").appendChild(pNameElem);
-            document.getElementById("cat1NameScores").appendChild(pScoreElem);
+        db.collection("names").where("category", "==", "sports").orderBy("score", "desc").limit(10).get().then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc) {
+                pNameElem = document.createElement("P");
+                pScoreElem = document.createElement("P");
+                pNameElem.innerHTML = doc.data().name;
+                pScoreElem.innerHTML = doc.data().score;
+                document.getElementById("cat1NameScores").appendChild(pNameElem);
+                document.getElementById("cat1NameScores").appendChild(pScoreElem);
             })
         });
-        db.collection("names").where("category", "==", "brands").orderBy("score", "desc").limit(10).get().then(function (querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-            pNameElem = document.createElement("P");
-            pScoreElem = document.createElement("P");
-            pNameElem.innerHTML = doc.data().name;
-            pScoreElem.innerHTML = doc.data().score;
-            document.getElementById("cat2NameScores").appendChild(pNameElem);
-            document.getElementById("cat2NameScores").appendChild(pScoreElem);
+        db.collection("names").where("category", "==", "brands").orderBy("score", "desc").limit(10).get().then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc) {
+                pNameElem = document.createElement("P");
+                pScoreElem = document.createElement("P");
+                pNameElem.innerHTML = doc.data().name;
+                pScoreElem.innerHTML = doc.data().score;
+                document.getElementById("cat2NameScores").appendChild(pNameElem);
+                document.getElementById("cat2NameScores").appendChild(pScoreElem);
             })
         });
-        db.collection("names").where("category", "==", "countries").orderBy("score", "desc").limit(10).get().then(function (querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-            pNameElem = document.createElement("P");
-            pScoreElem = document.createElement("P");
-            pNameElem.innerHTML = doc.data().name;
-            pScoreElem.innerHTML = doc.data().score;
-            document.getElementById("cat3NameScores").appendChild(pNameElem);
-            document.getElementById("cat3NameScores").appendChild(pScoreElem);
+        db.collection("names").where("category", "==", "countries").orderBy("score", "desc").limit(10).get().then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc) {
+                pNameElem = document.createElement("P");
+                pScoreElem = document.createElement("P");
+                pNameElem.innerHTML = doc.data().name;
+                pScoreElem.innerHTML = doc.data().score;
+                document.getElementById("cat3NameScores").appendChild(pNameElem);
+                document.getElementById("cat3NameScores").appendChild(pScoreElem);
             })
         });
-        db.collection("names").where("category", "==", "food").orderBy("score", "desc").limit(10).get().then(function (querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-            pNameElem = document.createElement("P");
-            pScoreElem = document.createElement("P");
-            pNameElem.innerHTML = doc.data().name;
-            pScoreElem.innerHTML = doc.data().score;
-            document.getElementById("cat4NameScores").appendChild(pNameElem);
-            document.getElementById("cat4NameScores").appendChild(pScoreElem);
+        db.collection("names").where("category", "==", "food").orderBy("score", "desc").limit(10).get().then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc) {
+                pNameElem = document.createElement("P");
+                pScoreElem = document.createElement("P");
+                pNameElem.innerHTML = doc.data().name;
+                pScoreElem.innerHTML = doc.data().score;
+                document.getElementById("cat4NameScores").appendChild(pNameElem);
+                document.getElementById("cat4NameScores").appendChild(pScoreElem);
             })
         });
     }
 
     function Word(category) {
-        let wordBank = {"sports": ["Archery", "Badminton", "Cricket", "Bowling", "Boxing", "Curling", "Tennis", "Skateboarding", "Surfing", "Hockey", 
-        "Figure skating", "Yoga", "Fencing", "Fitness", "Gymnastics", "Karate", "Volleyball", "Weightlifting", "Basketball", "Baseball", "Rugby", "Wrestling", 
-        "High jumping", "Hang gliding", "Car racing", "Cycling", "Running", "Table tennis", "Fishing", "Judo", "Climbing", "Billiards", "Shooting", 
-        "Horse racing", "Horseback riding", "Golf"],
-        "brands": ["Nike","Adidas","Puma","Starbuks","Blenz", "Waves", "Netflix", "Facebook","Google",
-        "Amazon","Ebay", "Microsoft", "Macdonald", "Disney", "IBM", "Burgerking","Subway", "Pepsi",
-        "Audi", "BMW", "Benz", "Jeep", "Acura", "Ferrari", "Honda", "Hyundai", "Mazda", "Maserati",
-        "Kia", "Mini", "Gucci", "Zara", "Prada", "Balenciaga", "Hermes", "Rolex", "Chanel", "Tomford",
-        "Dior", "Versace", "Lacoste", "Boss", "Fendi", "Givenchy", "Burberry", "Valentino", "Fedex", "Samsung",
-        "Lg", "Ikea", "Sony", "Apple", "Bestbuy", "Ford", "Subaru"],
-        "countries": ["South Korea", "United States", "Hong Kong", "Canada", "Afghanistan", "Albania", "Algeria", "Andorra", "Angola",
-        "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", 
-        "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Botswana", "Brazil", 
-        "Bulgaria", "Burundi", "Cambodia", "Cameroon", 
-        "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", 
-        "Cuba", "Cyprus", "Denmark", "Dominica", "Dominican Republic", 
-        "Ecudaor", "Egypt", "Eritrea", "Estonia", "Ethiopia", "Fiji", 
-        "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", 
-        "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Haiti", 
-        "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iraq", "Ireland", 
-        "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", 
-        "Kosovo", "Kuwait", "Kyrgyzstan", "Latvia", "Lebanon", "Lesotho", "Liberia", 
-        "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", 
-        "Mali", "Malta", "Martinique", "Mauritania", "Mauritius", "Mayotte", "Mexico", 
-        "Monaco", "Mongolia", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", 
-        "New Zealand", "Nicaragua", "Niger", "Nigeria", "Niue",  
-        "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Pitcairn", "Poland", "Portugal", 
-        "Puerto Rico", "Qatar", "Romania", "Russian", "Rwanda",  
-        "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", 
-        "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", 
-        "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", 
-        "Taiwan", "Tajikistan", "Thailand", "Togo",  "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", 
-        "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", 
-        "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City State", "Venezuela", "Vietnam", 
-        "Yemen", "Yugoslavia", "Zaire", "Zambia", "Zimbabwe"],
-        "food": ["Hamburger", "Lasagne", "Pizza", "Ramen", "Sushi", "Sashimi", "Kabob", "Curry", "Udon", "Steak", 
-        "Lobster", "Escargot", "Spaghetti", "Mooncake", "Linguine", "Macaroni", "Sandwich", "Burrito", "Quesadilla", "Taco", "Bagel", 
-        "Donut", "Poke", "Sausage", "Cheese", "Cookie", "Pie", "Cupcake", "Milk", "Pancake", "French fries", "Hot dog", "Muffin", "Salsa", 
-        "Bacon", "Brownie", "Lamb Chop", "Popcorn", "Pudding", "Onion ring", "Crepe", "Croissant", "Tamale", "Calzone", "Yogurt", " Egg", "Butter", 
-        "Pastrami", " Rib", "Brisket", "Pork chop"]};
+        let wordBank = {
+            "sports": ["Archery", "Badminton", "Cricket", "Bowling", "Boxing", "Curling", "Tennis", "Skateboarding", "Surfing", "Hockey",
+                "Figure skating", "Yoga", "Fencing", "Fitness", "Gymnastics", "Karate", "Volleyball", "Weightlifting", "Basketball", "Baseball", "Rugby", "Wrestling",
+                "High jumping", "Hang gliding", "Car racing", "Cycling", "Running", "Table tennis", "Fishing", "Judo", "Climbing", "Billiards", "Shooting",
+                "Horse racing", "Horseback riding", "Golf"
+            ],
+            "brands": ["Nike", "Adidas", "Puma", "Starbuks", "Blenz", "Waves", "Netflix", "Facebook", "Google",
+                "Amazon", "Ebay", "Microsoft", "Macdonald", "Disney", "IBM", "Burgerking", "Subway", "Pepsi",
+                "Audi", "BMW", "Benz", "Jeep", "Acura", "Ferrari", "Honda", "Hyundai", "Mazda", "Maserati",
+                "Kia", "Mini", "Gucci", "Zara", "Prada", "Balenciaga", "Hermes", "Rolex", "Chanel", "Tomford",
+                "Dior", "Versace", "Lacoste", "Boss", "Fendi", "Givenchy", "Burberry", "Valentino", "Fedex", "Samsung",
+                "Lg", "Ikea", "Sony", "Apple", "Bestbuy", "Ford", "Subaru"
+            ],
+            "countries": ["South Korea", "United States", "Hong Kong", "Canada", "Afghanistan", "Albania", "Algeria", "Andorra", "Angola",
+                "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados",
+                "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Botswana", "Brazil",
+                "Bulgaria", "Burundi", "Cambodia", "Cameroon",
+                "Chad", "Chile", "China", "Colombia", "Comoros", "Congo",
+                "Cuba", "Cyprus", "Denmark", "Dominica", "Dominican Republic",
+                "Ecudaor", "Egypt", "Eritrea", "Estonia", "Ethiopia", "Fiji",
+                "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany",
+                "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Haiti",
+                "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iraq", "Ireland",
+                "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya",
+                "Kosovo", "Kuwait", "Kyrgyzstan", "Latvia", "Lebanon", "Lesotho", "Liberia",
+                "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives",
+                "Mali", "Malta", "Martinique", "Mauritania", "Mauritius", "Mayotte", "Mexico",
+                "Monaco", "Mongolia", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands",
+                "New Zealand", "Nicaragua", "Niger", "Nigeria", "Niue",
+                "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Pitcairn", "Poland", "Portugal",
+                "Puerto Rico", "Qatar", "Romania", "Russian", "Rwanda",
+                "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia",
+                "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka",
+                "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland",
+                "Taiwan", "Tajikistan", "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey",
+                "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom",
+                "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City State", "Venezuela", "Vietnam",
+                "Yemen", "Yugoslavia", "Zaire", "Zambia", "Zimbabwe"
+            ],
+            "food": ["Hamburger", "Lasagne", "Pizza", "Ramen", "Sushi", "Sashimi", "Kabob", "Curry", "Udon", "Steak",
+                "Lobster", "Escargot", "Spaghetti", "Mooncake", "Linguine", "Macaroni", "Sandwich", "Burrito", "Quesadilla", "Taco", "Bagel",
+                "Donut", "Poke", "Sausage", "Cheese", "Cookie", "Pie", "Cupcake", "Milk", "Pancake", "French fries", "Hot dog", "Muffin", "Salsa",
+                "Bacon", "Brownie", "Lamb Chop", "Popcorn", "Pudding", "Onion ring", "Crepe", "Croissant", "Tamale", "Calzone", "Yogurt", " Egg", "Butter",
+                "Pastrami", " Rib", "Brisket", "Pork chop"
+            ]
+        };
         this.category = category.toLowerCase();
         this.wordBank = wordBank[this.category];
         this.answer = "";
         this.answer_placement = "";
         this.linesArray = [];
         this.answerArray = [];
-        
+
         this.answerPlacement = function() {
             this.answer_placement = "";
             console.log(this.linesArray);
@@ -251,7 +260,7 @@
         this.popWord = function() {
             this.answerArray = [];
             console.log(this.wordBank, this.category);
-            if (this.wordBank.length === 0) {        // if category key's value is empty, delete it
+            if (this.wordBank.length === 0) { // if category key's value is empty, delete it
                 delete wordBank[this.category];
                 console.log(wordBank);
                 this.wordBank = this.nextCategory();
@@ -265,12 +274,12 @@
             }
             //this.answerPlacement = "";
             this.linesArray = [];
-            
+
             for (let i = 0; i < this.answer.length; i++) {
                 if (this.answer[i] === ' ') {
                     this.linesArray.push(' ');
-                } else { 
-                this.linesArray.push('_');
+                } else {
+                    this.linesArray.push('_');
                 }
                 //this.answerPlacement += '_';
             }
@@ -305,11 +314,11 @@
         console.log("answer_array after update: " + wordBank.linesArray); //testing
     }
 
-    function generateWord(category) {  // category === onclick elem
+    function generateWord(category) { // category === onclick elem
         console.log(category, "HEY");
         word = wordBank.popWord();
         let answerPlacement = wordBank.answerPlacement();
-        
+
         console.log(word, answerPlacement);
         document.getElementById("answer_bank").innerHTML = answerPlacement;
         console.log("answer_array before update: " + wordBank.linesArray); //testing
@@ -319,7 +328,7 @@
         for (let i = 0; i < 26; i++) {
             let letter = String.fromCharCode(65 + i);
             let letterButton = document.createElement("button");
-            letterButton.className = "letter_buttons";  //css purposes
+            letterButton.className = "letter_buttons"; //css purposes
             letterButton.innerHTML = letter;
             letterButton.onclick = checkGuess;
             document.getElementById("letter_buttons_block").appendChild(letterButton);
@@ -334,10 +343,10 @@
     }
 
     function checkGuess() {
-        this.disabled = true;   //disables button
-        let guess = this.innerHTML.toUpperCase();     //works
+        this.disabled = true; //disables button
+        let guess = this.innerHTML.toUpperCase(); //works
         let answerFound = false;
-        for(let i = 0; i < word.length; i++) {
+        for (let i = 0; i < word.length; i++) {
             if (word[i] === guess) {
                 wordBank.linesArray[i] = guess.toUpperCase();
                 score++;
@@ -348,8 +357,8 @@
             lives--;
             score--;
         }
-        console.log("answer_array: " + wordBank.linesArray);   //test
-        console.log(lives, score);  //test
+        console.log("answer_array: " + wordBank.linesArray); //test
+        console.log(lives, score); //test
         updateScoreLives();
         updateAnswerBank();
         console.log(wordBank.checkWordComplete());
@@ -370,7 +379,7 @@
 
     function restartButton() {
         let restart_button = document.createElement("BUTTON");
-        
+
         restart_button.innerHTML = "Restart";
         restart_button.className = "restart_button"
         restart_button.onclick = function() {
@@ -404,7 +413,7 @@
         document.getElementById("categories").style.display = "none";
         document.getElementById("highScoreDisplay").style.display = "none";
     }
-    
+
     function main() {
         hangmanImgUpdate();
         restartButton();
@@ -412,9 +421,9 @@
         generateWord();
         letterButtons();
     }
-startScreenDisplay();
-
+    startScreenDisplay();
 </script>
 
 </body>
+
 </html>
