@@ -311,7 +311,7 @@
         explosion.play();
         gameOverImgRef.style.display = "block";
         setTimeout(function() {
-            gameOverImgRef.style.visibility = "hidden";
+            gameOverImgRef.style.display = "none";
         }, 2000);
     }
 
