@@ -49,6 +49,14 @@
 
     function readStoreHsByCat() {
         //read top 10 names by category
+        let cat1Node = document.getElementById("cat1NameScores");
+        let cat2Node = document.getElementById("cat2NameScores");
+        let cat3Node = document.getElementById("cat3NameScores");
+        let cat4Node = document.getElementById("cat4NameScores");
+        let cats = [cat1Node, cat2Node, cat3Node, cat4Node];
+        for (let i = 0; i < 4; i++) {
+            cats[i].innerHTML = "";
+        }
         db.collection("names").where("category", "==", "sports").orderBy("score", "desc").limit(10).get().then(function(querySnapshot) {
             querySnapshot.forEach(function(doc) {
                 pNameElem = document.createElement("P");
@@ -135,11 +143,11 @@
                 "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka",
                 "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland",
                 "Taiwan", "Tajikistan", "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey",
-                "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom",
-                "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City State", "Venezuela", "Vietnam",
-                "Yemen", "Yugoslavia", "Zaire", "Zambia", "Zimbabwe"
+                "Turkmenistan", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom",
+                "Uruguay", "Uzbekistan", "Venezuela", "Vietnam",
+                "Yemen", "Yugoslavia", "Zimbabwe"
             ],
-            "food": ["Hamburger", "Lasagne", "Pizza", "Ramen", "Sushi", "Sashimi", "Kabob", "Curry", "Udon", "Steak",
+            "food": ["Hamburger", "Lasagne", "Pizza", "Ramen", "Sushi", "Sashimi", "Kebob", "Curry", "Udon", "Steak",
                 "Lobster", "Escargot", "Spaghetti", "Mooncake", "Linguine", "Macaroni", "Sandwich", "Burrito", "Quesadilla", "Taco", "Bagel",
                 "Donut", "Poke", "Sausage", "Cheese", "Cookie", "Pie", "Cupcake", "Milk", "Pancake", "French fries", "Hot dog", "Muffin", "Salsa",
                 "Bacon", "Brownie", "Lamb Chop", "Popcorn", "Pudding", "Onion ring", "Crepe", "Croissant", "Tamale", "Calzone", "Yogurt", " Egg", "Butter",
