@@ -6,6 +6,23 @@
     <title>Hangman</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+    <script>
+    let firebaseConfig = {
+        apiKey: "AIzaSyACMZdQoxFJogdRsoOtPbSUxAbPVFPDZ4Y",
+        authDomain: "hangman-highscore.firebaseapp.com",
+        databaseURL: "https://hangman-highscore.firebaseio.com",
+        projectId: "hangman-highscore",
+        storageBucket: "hangman-highscore.appspot.com",
+        messagingSenderId: "512031509167",
+        appId: "1:512031509167:web:e524c4daea32480f10e25a",
+        measurementId: "G-CZ9J01XSB0"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
     <script type="text/javascript" src="hangman.js"></script>
 </head>
 
