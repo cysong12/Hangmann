@@ -212,6 +212,7 @@
         resetButtonsPressed();
         document.getElementById("game_over").style.display = "none";
         document.getElementById("game_play").style.display = "none";
+        document.getElementById("userScore").style.display = "none";
         document.getElementById("highScoreDisplay").style.display = "none";
         document.getElementById("startingbuttons").style.display = "block";
         startScreenDisplay();
@@ -314,6 +315,7 @@
     function hangmanImgUpdate() {
         document.getElementById("hangman").setAttribute("height", "400px");
         document.getElementById("userScore").innerHTML = "Your score is " + score + " (" + wordBank.category + ")";
+        document.getElementById("userScore").style.display = "block";
         document.getElementById("hangman").src = "images/" + String(lives) + ".jpg";
     }
 
