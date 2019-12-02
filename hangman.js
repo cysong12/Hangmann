@@ -54,6 +54,8 @@
                 pNameElem = document.createElement("P");
                 pScoreElem = document.createElement("P");
                 pNameElem.innerHTML = doc.data().name;
+                pNameElem.className = "sportsName";
+                pScoreElem.className = "sportsScore";
                 pScoreElem.innerHTML = doc.data().score;
                 document.getElementById("cat1NameScores").appendChild(pNameElem);
                 document.getElementById("cat1NameScores").appendChild(pScoreElem);
@@ -65,6 +67,8 @@
                 pScoreElem = document.createElement("P");
                 pNameElem.innerHTML = doc.data().name;
                 pScoreElem.innerHTML = doc.data().score;
+                pNameElem.className = "brandsName";
+                pScoreElem.className = "brandsScore";
                 document.getElementById("cat2NameScores").appendChild(pNameElem);
                 document.getElementById("cat2NameScores").appendChild(pScoreElem);
             })
@@ -75,6 +79,8 @@
                 pScoreElem = document.createElement("P");
                 pNameElem.innerHTML = doc.data().name;
                 pScoreElem.innerHTML = doc.data().score;
+                pNameElem.className = "countriesName";
+                pScoreElem.className = "countriesScore";
                 document.getElementById("cat3NameScores").appendChild(pNameElem);
                 document.getElementById("cat3NameScores").appendChild(pScoreElem);
             })
@@ -85,6 +91,8 @@
                 pScoreElem = document.createElement("P");
                 pNameElem.innerHTML = doc.data().name;
                 pScoreElem.innerHTML = doc.data().score;
+                pNameElem.className = "foodName";
+                pScoreElem.className = "foodScore";
                 document.getElementById("cat4NameScores").appendChild(pNameElem);
                 document.getElementById("cat4NameScores").appendChild(pScoreElem);
             })
