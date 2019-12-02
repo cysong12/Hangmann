@@ -112,8 +112,16 @@ margin-top: 5%;
     
 }
 
-
 #answer_bank{
     position: absolute;
     top: 50px;
     } 
+
+    @media only screen and (max-width: 625px) {
+        button {
+            font-size: 15px;
+        }
+        p {
+            font-size:5px;
+        }
+    }
