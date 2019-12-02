@@ -1,15 +1,3 @@
-@media only screen and (max-width: 625px) {
-    #game_play {
-        width: 100%;
-    }
-    #in_game_elements {
-        width: 50%;
-    }
-    #image_block {
-        width: 50%;
-    }
-}
-
 #start_page{
     height:100%;
     width:100%;
