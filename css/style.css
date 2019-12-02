@@ -29,7 +29,7 @@
 
 .letter_buttons {
     border-color: green;
-    font-size: 35px;
+    font-size: 4vh;
     background-color: olivedrab;
     margin: 5px 5px;
 }
@@ -44,7 +44,7 @@
 
 #image_block {
     margin-left: 30%;
-    margin-top: 20%;
+    margin-top: 15%;
     position: relative;
 }
 
