@@ -36,8 +36,9 @@
 }
 
 #letter_buttons_block {
-    position: relative;
-    bottom: 75px;
+    position: absolute;
+    margin-top:300px;
+    
 }
 
 #sports,
@@ -49,20 +50,24 @@
 }
 
 #image_block {
-    margin-left: 30%;
-    margin-top: 10%;
-    position: relative;
+    left:250px;
+    Top:10px;
+    position: absolute;
 }
 
 #score_block {
     font-size: 30px;
-    margin-top: -700px;
+    /* margin-top: 50px; */
     margin-left: 2%;
+    position:absolute;
+    
 }
 
 #lives_block {
     font-size: 30px;
     margin-left: 2%;
+    position:absolute;
+    margin-top:20%;
 }
 
 #game_over {
@@ -76,7 +81,8 @@
 }
 
 #answerPlacement {
-    margin-top: -100px;
+    margin-top: 100px;
+    position:absolute;
 }
 
 #restartButton {
@@ -96,8 +102,8 @@
 }
 
 #answer_bank_block {
-    position: relative;
-    bottom: 100px;
+    position: absolute;
+    Top:30px;
     letter-spacing: 5px;
     font-size: 36px;
 }
