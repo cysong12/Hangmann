@@ -50,7 +50,7 @@
 }
 
 #image_block {
-    left:250px;
+    left:180px;
     Top:10px;
     position: absolute;
 }
@@ -67,7 +67,7 @@
     font-size: 30px;
     margin-left: 2%;
     position:absolute;
-    margin-top:20%;
+    Top:200px;
 }
 
 #game_over {
