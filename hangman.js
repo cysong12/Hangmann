@@ -68,6 +68,7 @@
             updateAnswerBank();
             if (wordBank.checkWordComplete()) {
                 generateWord(category);
+                console.log(word);
                 resetButtonsPressed();
             }
             j++;
