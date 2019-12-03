@@ -194,7 +194,12 @@ margin-top: 1vh;
     width: 30vh;
 }
 
-#name, #submit {
+#name{
     font-size: 2vh;
 
+}
+
+#submit {
+    font-size: 2vh;
+    border-color: black;
 }
