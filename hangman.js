@@ -171,28 +171,28 @@
             ],
             "brands": ["Nike", "Adidas", "Puma", "Starbucks", "Blenz", "Waves", "Netflix", "Facebook", "Google",
                 "Amazon", "Ebay", "Microsoft", "Macdonald", "Disney", "IBM", "Burgerking", "Subway", "Pepsi",
-                "Audi", "BMW", "Benz", "Jeep", "Acura", "Ferrari", "Honda", "Hyundai", "Mazda", "Maserati",
+                "Audi", "Benz", "Jeep", "Acura", "Ferrari", "Honda", "Hyundai", "Mazda", "Maserati",
                 "Kia", "Mini", "Gucci", "Zara", "Prada", "Balenciaga", "Hermes", "Rolex", "Chanel", "Tomford",
                 "Dior", "Versace", "Lacoste", "Boss", "Fendi", "Givenchy", "Burberry", "Valentino", "Fedex", "Samsung",
-                "Lg", "Ikea", "Sony", "Apple", "Bestbuy", "Ford", "Subaru"//, "Tattoo", "Electricity" testing purposes for Amir
+                "Ikea", "Sony", "Apple", "Bestbuy", "Ford", "Subaru"//, "Tattoo", "Electricity" testing purposes for Amir
             ],
             "countries": ["South Korea", "United States", "Hong Kong", "Canada", "Afghanistan", "Albania", "Algeria", "Andorra", "Angola",
                 "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados",
                 "Belarus", "Belgium", "Belize", "Bermuda", "Bhutan", "Bolivia", "Botswana", "Brazil",
                 "Bulgaria", "Cambodia", "Cameroon",
-                "Chad", "Chile", "China", "Colombia", "Comoros", "Congo",
-                "Cuba", "Cyprus", "Denmark", "Dominica", "Dominican Republic",
+                "Chad", "Chile", "China", "Colombia", "Congo",
+                "Cuba", "Cyprus", "Denmark", "Dominican Republic",
                 "Ecudaor", "Egypt", "Estonia", "Ethiopia", "Fiji",
                 "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany",
-                "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Haiti",
+                "Ghana", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Haiti",
                 "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iraq", "Ireland",
                 "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya",
-                "Kosovo", "Kuwait", "Latvia", "Lebanon", "Lesotho", "Liberia",
+                "Kuwait", "Latvia", "Lebanon", "Liberia",
                 "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malaysia", "Maldives",
                 "Mali", "Mexico",
                 "Monaco", "Mongolia", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nepal", "Netherlands",
                 "New Zealand", "Nicaragua", "Niger", "Nigeria", 
-                "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal",
+                "Norway", "Oman", "Pakistan", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal",
                 "Puerto Rico", "Qatar", "Romania", "Russian", "Rwanda",
                 "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Sierra Leone", "Singapore", "Slovakia", "Slovenia",
                 "South Africa", "South Sudan", "Spain", "Sri Lanka",
@@ -205,8 +205,8 @@
             "food": ["Hamburger", "Lasagne", "Pizza", "Ramen", "Sushi", "Sashimi", "Kebob", "Curry", "Udon", "Steak",
                 "Lobster", "Escargot", "Spaghetti", "Mooncake", "Linguine", "Macaroni", "Sandwich", "Burrito", "Quesadilla", "Taco", "Bagel",
                 "Donut", "Poke", "Sausage", "Cheese", "Cookie", "Pie", "Cupcake", "Milk", "Pancake", "French fries", "Hot dog", "Muffin", "Salsa",
-                "Bacon", "Brownie", "Lamb Chop", "Popcorn", "Pudding", "Onion ring", "Crepe", "Croissant", "Tamale", "Calzone", "Yogurt", " Egg", "Butter",
-                "Pastrami", " Rib", "Brisket", "Pork chop"
+                "Bacon", "Brownie", "Lamb Chop", "Popcorn", "Pudding", "Onion ring", "Crepe", "Croissant", "Tamale", "Calzone", "Yogurt", "Butter",
+                "Pastrami", "Brisket", "Pork chop"
             ]
         };
         this.category = category.toLowerCase();
