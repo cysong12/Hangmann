@@ -18,10 +18,11 @@
     border-color: black;
     font-size: 50px;
 }
-/* #hint_block{
-    
-    position:absolute;
-} */
+
+#hint_block{   
+    margin-left: 1vh;
+}
+
 #startingbuttons,
 #categories {
     position: absolute;
@@ -42,11 +43,9 @@
 
 }
 
-/* #letter_buttons_block {
-    position: absolute;
-    top:500px;
-    
-} */
+#letter_buttons_block {
+    margin-left: 1vh;
+}
 
 #sports,
 #brands,
@@ -56,21 +55,22 @@
     border-color: black;
 }
 
-/* #image_block {
-    left:180px;
-    Top:10px;
-    position: absolute;
-} */
+#image_block {
+    margin-left: 0.5vh;
+}
 
 #score_block {
+    margin-left: 0.5vh;
     font-size: 2vh;
 }
 
  #lives_block {
+    margin-left: 0.5vh;
     font-size: 2vh;
 }
 
 #hint_block{
+    margin-left: 0.5vh;
     font-size: 2vh;
 }
 
@@ -111,8 +111,7 @@
 }
 
 #answer_bank_block {
-    /* position: absolute;
-    Top:380px; */
+    margin-left: 0.5vh;
     letter-spacing: 5px;
     font-size: 2vh;
 }
