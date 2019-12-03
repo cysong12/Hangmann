@@ -42,7 +42,6 @@
             for (let i = 0; i < word.length; i++) {
                 if (wordBank.answer[i] === letter1) {
                     wordBank.linesArray[i] = letter1;
-                    //console.log(letter1.charCodeAt(0), letter1, buttons[letter1.charCodeAt(0)-65].innerText);
                 }
             }
 
@@ -65,11 +64,9 @@
                 }
             }
             buttons[letter2.charCodeAt(0)-65].disabled = true;
-            console.log(buttons[letter2.charCodeAt(0)-65].innerText);
             updateAnswerBank();
             if (wordBank.checkWordComplete()) {
                 generateWord(category);
-                console.log(word);
                 resetButtonsPressed();
             }
         } else {
