@@ -19,9 +19,9 @@
     font-size: 50px;
 }
 
-#hint_block{   
+/* #hint_block{   
     margin-left: 1vh;
-}
+} */
 
 #startingbuttons,
 #categories {
@@ -43,9 +43,9 @@
 
 }
 
-#letter_buttons_block {
+/* #letter_buttons_block {
     margin-left: 1vh;
-}
+} */
 
 #sports,
 #brands,
@@ -55,22 +55,15 @@
     border-color: black;
 }
 
-#image_block {
-    margin-left: 0.5vh;
-}
-
 #score_block {
-    margin-left: 0.5vh;
     font-size: 3vh;
 }
 
  #lives_block {
-    margin-left: 0.5vh;
     font-size: 3vh;
 }
 
 #hint_block{
-    margin-left: 0.5vh;
     font-size: 3vh;
     margin-bottom: 3vh;
 }
@@ -78,7 +71,7 @@
 #game_over {
     font-size: 20px;
     margin-top: 4vh;
-    margin-left: 10%;
+    /* margin-left: 4vh; */
 }
 
 /* #in-game_elements {
@@ -111,8 +104,7 @@ margin-top: 1vh;
 }
 
 #answer_bank_block {
-    margin-left: 0.5vh;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     font-size: 4vh;
 }
 
