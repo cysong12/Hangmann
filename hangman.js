@@ -23,6 +23,7 @@
     let hint_counter;
 
     function giveHints() {
+        let tempLineIndex = [];
         if (hint_counter >= 1) {
             hint_counter--;
             document.getElementById("hintAlert").innerHTML = "Filled 2 letters!";
@@ -30,18 +31,32 @@
             let j = 0;
             for (let i = 0; i < word.length; i++) {
                 if (wordBank.linesArray[i] === '_') {
-                    wordBank.linesArray[i] = word[i];
-                    updateAnswerBank();
-                    if (wordBank.checkWordComplete()) {
-                        generateWord(category);
-                        resetButtonsPressed();
-                    }
-                    j++;
-                }
-                if (j === 2) {
-                    break;
+                    tempLineIndex.push(i);
                 }
             }
+            console.log(tempLineIndex);
+            let i1 = tempLineIndex[Math.floor(Math.random() * tempLineIndex.length)];
+            tempLineIndex.splice(i1, 1);
+            let letter1 = word[i1];
+            wordBank.linesArray[i1] = letter1;
+            tempLineIndex = [];
+            for (let i = 0; i < word.length; i++) {
+                if (wordBank.linesArray[i] === '_') {
+                    tempLineIndex.push(i);
+                }
+            }
+            let i2 = tempLineIndex[Math.floor(Math.random() * tempLineIndex.length)];
+            tempLineIndex.splice(i2, 1);
+            //let letter1 = word[i1];
+            let letter2 = word[i2];
+            //wordBank.linesArray[i1] = letter1;
+            wordBank.linesArray[i2] = letter2;
+            updateAnswerBank();
+            if (wordBank.checkWordComplete()) {
+                generateWord(category);
+                resetButtonsPressed();
+            }
+            j++;
         } else {
             document.getElementById("hintAlert").innerHTML = "No more hints left!";
         }
