@@ -91,11 +91,12 @@
 
 #restartButton {
     border-color: black;
-    font-size: 20px;
+    font-size: 2vh;
     bottom: 200px;
 }
 
 #hintButton {
+    border-color: black;
     font-size: 2vh;
 }
 
