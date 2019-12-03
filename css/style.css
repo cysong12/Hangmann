@@ -5,6 +5,11 @@
     position: absolute
 }
 
+#hangman {
+    height: 50vh;
+    width: 15vw;
+}
+
 #highscores {
     border-color: black;
     font-size: 50px;
@@ -32,7 +37,7 @@
 
 .letter_buttons {
     border-color: green;
-    font-size: 4vh;
+    font-size: 2vh;
     background-color: olivedrab;
     margin: 5px;
 
@@ -59,16 +64,16 @@
 } */
 
 #score_block {
-    font-size: 4vh;
+    font-size: 2vh;
 }
 
  #lives_block {
-    font-size: 4vh;
+    font-size: 2vh;
 }
 
-/* #hint_block{
-    font-size: 4vh;
-} */
+#hint_block{
+    font-size: 2vh;
+}
 
 #game_over {
     font-size: 20px;
@@ -91,6 +96,10 @@
     bottom: 200px;
 }
 
+#hintButton {
+    font-size: 2vh;
+}
+
 #restart {
     position: relative;
     top: 15px;
@@ -105,7 +114,7 @@
     /* position: absolute;
     Top:380px; */
     letter-spacing: 5px;
-    font-size: 4vh;
+    font-size: 2vh;
 }
 
 
