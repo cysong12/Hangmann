@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let firebaseConfig = {
+    apiKey: "AIzaSyCJ9Fz5TkiMTTCNm-Dtz9rbbnooLAeTZ2Q",
+    authDomain: "hangman-1f1e9.firebaseapp.com",
+    databaseURL: "https://hangman-1f1e9.firebaseio.com",
+    projectId: "hangman-1f1e9",
+    storageBucket: "hangman-1f1e9.appspot.com",
+    messagingSenderId: "788703409251",
+    appId: "1:788703409251:web:7a8e54d9eef6ecfd13b456"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+// Establish firebase database connection
+let db = firebase.firestore();
+
+db.collection('LeaderBoard').doc().set({
+    name: "Choi",
+    score: 9999999999999
+})
+    .then(function () {
+        console.log("Document successfully added!");
+    })
+    .catch(function (error) {
+        console.error("Error writing document ", error);
+    })
+</script>
+</body>
+</html>

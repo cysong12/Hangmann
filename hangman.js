@@ -273,6 +273,7 @@
     function restart() {
         resetStats();
         resetButtonsPressed();
+        document.getElementById("hintAlert").innerHTML = "";
         document.getElementById("game_over").style.display = "none";
         document.getElementById("game_play").style.display = "none";
         document.getElementById("userScore").style.display = "none";
