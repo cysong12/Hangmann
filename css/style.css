@@ -5,6 +5,10 @@
     position: absolute
 }
 
+#hangman {
+    height: 50vh;
+}
+
 #highscores {
     border-color: black;
     font-size: 50px;
@@ -15,15 +19,19 @@
     font-size: 50px;
 }
 
+/* #hint_block{   
+    margin-left: 1vh;
+} */
+
 #startingbuttons,
 #categories {
-    position: absolute;
+    /* position: absolute;
     text-align: center;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
     line-height: 2px;
-    width: 100%;
-    top: 40%;
+    /* width: 100%; */
+    margin-top: 25vh;
     white-space: pre-line;
 }
 
@@ -35,11 +43,9 @@
 
 }
 
-#letter_buttons_block {
-    position: absolute;
-    top:500px;
-    
-}
+/* #letter_buttons_block {
+    margin-left: 1vh;
+} */
 
 #sports,
 #brands,
@@ -49,67 +55,57 @@
     border-color: black;
 }
 
-#image_block {
-    left:180px;
-    Top:10px;
-    position: absolute;
-}
-
 #score_block {
-    font-size: 20px;
-    
-    margin-left: 2%;
-    position:absolute;
-    
+    font-size: 3vh;
 }
 
-#lives_block {
-    font-size: 20px;
-    margin-left: 2%;
-    position:absolute;
-    Top:200px;
+ #lives_block {
+    font-size: 3vh;
 }
+
 #hint_block{
-    font-size: 20px;
-    top:300px;
-
+    font-size: 3vh;
+    margin-bottom: 3vh;
 }
+
 #game_over {
     font-size: 20px;
-    margin-top: 200px;
-    margin-left: 10%;
+    margin-top: 4vh;
+    /* margin-left: 4vh; */
 }
 
-#in-game_elements {
+/* #in-game_elements {
     margin-top: 50px;
-}
+} */
 
-#answerPlacement {
+/* #answerPlacement {
     margin-top: 100px;
     position:absolute;
-}
+} */
 
 #restartButton {
     border-color: black;
-    font-size: 20px;
+    font-size: 2vh;
     bottom: 200px;
 }
 
+#hintButton {
+    border-color: black;
+    font-size: 2vh;
+}
+
 #restart {
-    position: relative;
-    top: 15px;
-    left: 2%;
+margin-left: 1vh;
+margin-top: 1vh;
 }
 
 #answer_bank {
-    word-spacing: 2px;
+    word-spacing:2vh;
 }
 
 #answer_bank_block {
-    position: absolute;
-    Top:380px;
-    letter-spacing: 5px;
-    font-size: 36px;
+    letter-spacing: 2px;
+    font-size: 4vh;
 }
 
 
@@ -182,11 +178,20 @@
 }
 
 #game_over_text {
-    font-size: 50px;
+    font-size: 4vh;
 
 }
 
-#name, #submit {
-    font-size: 18px;
+#game_over_img {
+    width: 30vh;
+}
 
+#name{
+    font-size: 2vh;
+
+}
+
+#submit {
+    font-size: 2vh;
+    border-color: black;
 }

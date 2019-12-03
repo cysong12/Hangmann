@@ -6,61 +6,89 @@
     <title>Hangman</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
 </head>
 
 <body>
-        <!--    <img src = "rope.png" id ="start_page">-->
-        <div id="restart">
-            <button id="restartButton" onclick="restart();">Home</button>
-        </div>
-    <div id="startingbuttons">
-            <button id="start_button" onclick="clickedStart();">Start Game</button>
-            <button id="highscores" onclick="highScoreDisplay();">High Scores</button>
+    <!--    <img src = "rope.png" id ="start_page">-->
+    <div id="restart">
+        <button id="restartButton" onclick="restart();" type="button" class="btn btn-info">Home</button>
     </div>
-    <div id="categories">
-            <button id="sports" onclick="clickedCategory(this);">Sports</button>
-            <button id="brands" onclick="clickedCategory(this);">Brands</button>
-            <button id="countries" onclick="clickedCategory(this);">Countries</button>
-            <button id="food" onclick=clickedCategory(this);>Food</button>
-    </div>
-    <div id="game_play">
-        <div id="image_block">
-            <img id="hangman" />
+    <div id="startingbuttons" class="container">
+        <div class="row justify-content-center">
+            <button id="start_button" onclick="clickedStart();" type="button" class="btn btn-info">Start Game</button>
         </div>
-        <div id="in-game_elements">
-            <div id="answer_bank_block">
-                <p id="answer_bank"></p>
-            </div>
-            <div id="letter_buttons_block">
-            </div>
+        <div class="row justify-content-center">
+            <button id="highscores" onclick="highScoreDisplay();" type="button" class="btn btn-info">High
+                Scores</button>
+        </div>
+    </div>
+    <div id="categories" class="container">
+        <div class="row justify-content-center">
+            <button id="sports" onclick="clickedCategory(this);" type="button" class="btn btn-info">Sports</button>
+        </div>
+        <div class="row justify-content-center">
+            <button id="brands" onclick="clickedCategory(this);" type="button" class="btn btn-info">Brands</button>
+        </div>
+        <div class="row justify-content-center">
+            <button id="countries" onclick="clickedCategory(this);" type="button"
+                class="btn btn-info">Countries</button>
+        </div>
+        <div class="row justify-content-center">
+            <button id="food" onclick="clickedCategory(this)" type="button" class="btn btn-info" ;>Food</button>
+        </div>
+    </div>
+    <div id="game_play" class="container">
+        <div id="image_block" class="row justify-content-center">
+            <img id="hangman" class="img-fluid" alt="Responsive image" />
+        </div>
 
-            <div id="score_block">
-                <p id="score_label">Score: </p>
-                <p id="score_value">0</p>
-            </div>
-            <div id="lives_block">
-                <p id="lives_label">Lives: </p>
-                <p id="lives_value">7</p>
-            </div>
-            <div id="hint_block">
-                <button id="hintButton" onclick="giveHints()">Hints</button>
+        <div id="hint_block" class="row justify-content-center">
+            <div id='hintBtn' class="row justify-content-center">
+                <button id="hintButton" onclick="giveHints()" type="button" class="btn btn-info">Hints</button>
                 <p id="hintCounter">Number of hints: 3</p>
                 <p id="hintAlert"></p>
             </div>
         </div>
+        <div id="answer_bank_block" class="row justify-content-center">
+            <p id="answer_bank"></p>
+        </div>
+
+        <div id="score_block" class="row justify-content-center">
+            <p id="score_label">Score: </p>
+            <p id="score_value">0</p>
+        </div>
+        <div id="lives_block" class="row justify-content-center">
+            <p id="lives_label">Lives: </p>
+            <p id="lives_value">7</p>
+        </div>
+        <div id="letter_buttons_block" class="row justify-content-center"></div>
     </div>
 
-    <div id="game_over">
-        <p id="correctAnswer"></p>
-        <p id="game_over_text">GAME OVER</p>
-        <img id="game_over_img" />
-        <input id="name" type="text" value="Rick Sanchez" />
-        <button id="submit" onclick="highscoreDB();">Submit</button>
+    <div id="game_over" class="container">
+        <div class="row justify-content-center">
+            <p id="correctAnswer"></p>
+        </div>
+        <div class="row justify-content-center">
+            <p id="game_over_text">GAME OVER</p>
+        </div>
+        <div class="row justify-content-center">
+            <img id="game_over_img" class="img-fluid" alt="Responsive image" />
+        </div>
+        <div class="row justify-content-center">
+            <input id="name" type="text" value="Rick Sanchez" />
+            <button id="submit" onclick="highscoreDB();" type="button" class="btn btn-info">Submit</button>
+        </div>
+
+
+        <div class="row justify-content-center">
+            <p id="userScore"></p>
+        </div>
     </div>
-    <p id="userScore"></p>
     <div id="highScoreDisplay">
         <p id="userScore"></p>
         <div id="highScoreCategories">
