@@ -169,7 +169,7 @@
                 "High jumping", "Hang gliding", "Car racing", "Cycling", "Running", "Table tennis", "Fishing", "Judo", "Climbing", "Billiards", "Shooting",
                 "Horse racing", "Horseback riding", "Golf"
             ],
-            "brands": ["Nike", "Adidas", "Puma", "Starbuks", "Blenz", "Waves", "Netflix", "Facebook", "Google",
+            "brands": ["Nike", "Adidas", "Puma", "Starbucks", "Blenz", "Waves", "Netflix", "Facebook", "Google",
                 "Amazon", "Ebay", "Microsoft", "Macdonald", "Disney", "IBM", "Burgerking", "Subway", "Pepsi",
                 "Audi", "BMW", "Benz", "Jeep", "Acura", "Ferrari", "Honda", "Hyundai", "Mazda", "Maserati",
                 "Kia", "Mini", "Gucci", "Zara", "Prada", "Balenciaga", "Hermes", "Rolex", "Chanel", "Tomford",
@@ -406,6 +406,7 @@
     letterButtons();
     function main() {
         hint_counter = 3;
+        document.getElementById("hintCounter").innerHTML = "Number of hints: 3";
         hangmanImgUpdate();
         wordBank = new Word(category);
         generateWord();
