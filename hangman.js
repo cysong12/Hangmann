@@ -162,7 +162,7 @@
                 "Audi", "BMW", "Benz", "Jeep", "Acura", "Ferrari", "Honda", "Hyundai", "Mazda", "Maserati",
                 "Kia", "Mini", "Gucci", "Zara", "Prada", "Balenciaga", "Hermes", "Rolex", "Chanel", "Tomford",
                 "Dior", "Versace", "Lacoste", "Boss", "Fendi", "Givenchy", "Burberry", "Valentino", "Fedex", "Samsung",
-                "Lg", "Ikea", "Sony", "Apple", "Bestbuy", "Ford", "Subaru"
+                "Lg", "Ikea", "Sony", "Apple", "Bestbuy", "Ford", "Subaru"//, "Tattoo", "Electricity" testing purposes for Amir
             ],
             "countries": ["South Korea", "United States", "Hong Kong", "Canada", "Afghanistan", "Albania", "Algeria", "Andorra", "Angola",
                 "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados",
