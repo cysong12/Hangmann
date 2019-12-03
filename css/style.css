@@ -187,11 +187,11 @@
 }
 
 #game_over_text {
-    font-size: 50px;
+    font-size: 4vh;
 
 }
 
 #name, #submit {
-    font-size: 18px;
+    font-size: 2vh;
 
 }
