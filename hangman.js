@@ -71,7 +71,7 @@
                 generateWord(category);
                 resetButtonsPressed();
             }
-            document.getElementById("hintAlert").innerHTML = "Filled" + letterGivenCounter + "letters!";
+            document.getElementById("hintAlert").innerHTML = "Filled " + letterGivenCounter + " letters!";
         } else {
             document.getElementById("hintAlert").innerHTML = "No more hints left!";
         }
