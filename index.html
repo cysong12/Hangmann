@@ -18,15 +18,29 @@
     <div id="restart">
         <button id="restartButton" onclick="restart();" type="button" class="btn btn-info">Home</button>
     </div>
-    <div id="startingbuttons">
-        <button id="start_button" onclick="clickedStart();" type="button" class="btn btn-info">Start Game</button>
-        <button id="highscores" onclick="highScoreDisplay();" type="button" class="btn btn-info">High Scores</button>
+    <div id="startingbuttons" class="container">
+        <div class="row justify-content-md-center">
+            <button id="start_button" onclick="clickedStart();" type="button" class="btn btn-info">Start Game</button>
+        </div>
+        <div class="row justify-content-md-center">
+            <button id="highscores" onclick="highScoreDisplay();" type="button" class="btn btn-info">High
+                Scores</button>
+        </div>
     </div>
-    <div id="categories">
-        <button id="sports" onclick="clickedCategory(this);" type="button" class="btn btn-info">Sports</button>
-        <button id="brands" onclick="clickedCategory(this);" type="button" class="btn btn-info">Brands</button>
-        <button id="countries" onclick="clickedCategory(this);" type="button" class="btn btn-info">Countries</button>
-        <button id="food" onclick="clickedCategory(this)" type="button" class="btn btn-info" ;>Food</button>
+    <div id="categories" class="container">
+        <div class="row justify-content-md-center">
+            <button id="sports" onclick="clickedCategory(this);" type="button" class="btn btn-info">Sports</button>
+        </div>
+        <div class="row justify-content-md-center">
+            <button id="brands" onclick="clickedCategory(this);" type="button" class="btn btn-info">Brands</button>
+        </div>
+        <div class="row justify-content-md-center">
+            <button id="countries" onclick="clickedCategory(this);" type="button"
+                class="btn btn-info">Countries</button>
+        </div>
+        <div class="row justify-content-md-center">
+            <button id="food" onclick="clickedCategory(this)" type="button" class="btn btn-info" ;>Food</button>
+        </div>
     </div>
     <div id="game_play" class="container">
         <div id="image_block" class="row justify-content-md-center">
@@ -35,10 +49,10 @@
 
         <div id="hint_block" class="row justify-content-md-center">
             <div id='hintBtn' class="row justify-content-md-center">
-            <button id="hintButton" onclick="giveHints()" type="button" class="btn btn-info">Hints</button>
-            <p id="hintCounter">Number of hints: 3</p>
-            <p id="hintAlert"></p>
-        </div>
+                <button id="hintButton" onclick="giveHints()" type="button" class="btn btn-info">Hints</button>
+                <p id="hintCounter">Number of hints: 3</p>
+                <p id="hintAlert"></p>
+            </div>
         </div>
         <div id="answer_bank_block" class="row justify-content-md-center">
             <p id="answer_bank"></p>
@@ -66,14 +80,14 @@
             <img id="game_over_img" class="img-fluid" alt="Responsive image" />
         </div>
         <div class="row justify-content-md-center">
-                <input id="name" type="text" value="Rick Sanchez" />
-                <button id="submit" onclick="highscoreDB();" type="button" class="btn btn-info">Submit</button>
-            </div>
+            <input id="name" type="text" value="Rick Sanchez" />
+            <button id="submit" onclick="highscoreDB();" type="button" class="btn btn-info">Submit</button>
+        </div>
 
 
         <div class="row justify-content-md-center">
-                <p id="userScore"></p>
-            </div>
+            <p id="userScore"></p>
+        </div>
     </div>
     <div id="highScoreDisplay">
         <p id="userScore"></p>
