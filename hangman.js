@@ -26,6 +26,7 @@
         let tempLineIndex = [];
         //let sameLetterIndex = [];
         let buttons = document.getElementsByClassName("letter_buttons");
+        let letterGivenCounter = 0;
 
         if (hint_counter >= 1) {
             hint_counter--;
@@ -42,6 +43,7 @@
             for (let i = 0; i < word.length; i++) {
                 if (wordBank.answer[i] === letter1) {
                     wordBank.linesArray[i] = letter1;
+                    letterGivenCounter += 1;
                 }
             }
 
@@ -61,6 +63,7 @@
             for (let i = 0; i < word.length; i++) {
                 if (wordBank.answer[i] === letter2) {
                     wordBank.linesArray[i] = letter2;
+                    letterGivenCounter += 1;
                 }
             }
             buttons[letter2.charCodeAt(0)-65].disabled = true;
