@@ -6,17 +6,17 @@
 }
 
 #hangman {
-    height: 50vh;
+    height: 33vh;
 }
 
 #highscores {
     border-color: black;
-    font-size: 50px;
+    font-size: 3vh;
 }
 
 #start_button {
     border-color: black;
-    font-size: 50px;
+    font-size: 3vh;
 }
 
 /* #hint_block{   
@@ -100,6 +100,7 @@ margin-top: 1vh;
 }
 
 #answer_bank {
+    font-size: 3vh;
     word-spacing:2vh;
 }
 
@@ -184,6 +185,7 @@ margin-top: 1vh;
 
 #game_over_img {
     width: 30vh;
+
 }
 
 #name{
@@ -194,4 +196,19 @@ margin-top: 1vh;
 #submit {
     font-size: 2vh;
     border-color: black;
+
+}
+
+#hintCounter, #hintAlert {
+    font-size: 2.5vh;
+
+}
+
+#hintMessage {
+    width: 100%;
+
+}
+
+#hintBtn {
+    width: 100%;
 }
