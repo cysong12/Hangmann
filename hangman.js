@@ -30,7 +30,6 @@
 
         if (hint_counter >= 1) {
             hint_counter--;
-            document.getElementById("hintAlert").innerHTML = "Filled 2 letters!";
             wordLength = word.length;
             for (let i = 0; i < word.length; i++) {
                 if (wordBank.linesArray[i] === '_') {
@@ -72,6 +71,7 @@
                 generateWord(category);
                 resetButtonsPressed();
             }
+            document.getElementById("hintAlert").innerHTML = "Filled" + letterGivenCounter + "letters!";
         } else {
             document.getElementById("hintAlert").innerHTML = "No more hints left!";
         }
