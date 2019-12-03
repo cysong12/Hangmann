@@ -25,13 +25,13 @@
 
 #startingbuttons,
 #categories {
-    position: absolute;
+    /* position: absolute;
     text-align: center;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
     line-height: 2px;
-    width: 100%;
-    top: 40%;
+    /* width: 100%; */
+    margin-top: 25vh;
     white-space: pre-line;
 }
 
