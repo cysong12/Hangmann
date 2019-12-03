@@ -66,10 +66,8 @@
             buttons[letter2.charCodeAt(0)-65].disabled = true;
             updateAnswerBank();
             if (wordBank.checkWordComplete()) {
-                setTimeout(function() {
-                    generateWord(category);
-                    resetButtonsPressed();
-                }, 1500);
+                generateWord(category);
+                resetButtonsPressed();
             }
         } else {
             document.getElementById("hintAlert").innerHTML = "No more hints left!";
