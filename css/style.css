@@ -191,6 +191,10 @@
 
 }
 
+#game_over_img {
+    width: 30vh;
+}
+
 #name, #submit {
     font-size: 2vh;
 

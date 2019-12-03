@@ -29,49 +29,49 @@
         <button id="food" onclick="clickedCategory(this)" type="button" class="btn btn-info" ;>Food</button>
     </div>
     <div id="game_play" class="container">
-        <div id="image_block" class="row">
+        <div id="image_block" class="row justify-content-md-center">
             <img id="hangman" class="img-fluid" alt="Responsive image" />
         </div>
 
-        <div id="hint_block" class="row">
-            <div id='hintBtn' class="col-6">
+        <div id="hint_block" class="row justify-content-md-center">
+            <div id='hintBtn' class="row justify-content-md-center">
             <button id="hintButton" onclick="giveHints()" type="button" class="btn btn-info">Hints</button>
             <p id="hintCounter">Number of hints: 3</p>
             <p id="hintAlert"></p>
         </div>
         </div>
-        <div id="answer_bank_block" class="row">
+        <div id="answer_bank_block" class="row justify-content-md-center">
             <p id="answer_bank"></p>
         </div>
 
-        <div id="score_block" class="row">
+        <div id="score_block" class="row justify-content-md-center">
             <p id="score_label">Score: </p>
             <p id="score_value">0</p>
         </div>
-        <div id="lives_block" class="row">
+        <div id="lives_block" class="row justify-content-md-center">
             <p id="lives_label">Lives: </p>
             <p id="lives_value">7</p>
         </div>
-        <div id="letter_buttons_block" class="row"></div>
+        <div id="letter_buttons_block" class="row justify-content-md-center"></div>
     </div>
 
     <div id="game_over" class="container">
-        <div class="row">
+        <div class="row justify-content-md-center">
             <p id="correctAnswer"></p>
         </div>
-        <div class="row">
+        <div class="row justify-content-md-center">
             <p id="game_over_text">GAME OVER</p>
         </div>
-        <div class="row">
+        <div class="row justify-content-md-center">
             <img id="game_over_img" class="img-fluid" alt="Responsive image" />
         </div>
-        <div class="row">
+        <div class="row justify-content-md-center">
                 <input id="name" type="text" value="Rick Sanchez" />
                 <button id="submit" onclick="highscoreDB();" type="button" class="btn btn-info">Submit</button>
             </div>
 
 
-        <div class="row">
+        <div class="row justify-content-md-center">
                 <p id="userScore"></p>
             </div>
     </div>
