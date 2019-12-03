@@ -61,17 +61,18 @@
 
 #score_block {
     margin-left: 0.5vh;
-    font-size: 2vh;
+    font-size: 3vh;
 }
 
  #lives_block {
     margin-left: 0.5vh;
-    font-size: 2vh;
+    font-size: 3vh;
 }
 
 #hint_block{
     margin-left: 0.5vh;
-    font-size: 2vh;
+    font-size: 3vh;
+    margin-bottom: 3vh;
 }
 
 #game_over {
@@ -101,9 +102,8 @@
 }
 
 #restart {
-    position: relative;
-    top: 15px;
-    left: 2%;
+margin-left: 1vh;
+margin-top: 1vh;
 }
 
 #answer_bank {
@@ -113,7 +113,7 @@
 #answer_bank_block {
     margin-left: 0.5vh;
     letter-spacing: 5px;
-    font-size: 2vh;
+    font-size: 4vh;
 }
 
 
