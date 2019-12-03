@@ -54,18 +54,20 @@
                     tempLineIndex.push(i);
                 }
             }
-            let i2 = tempLineIndex[Math.floor(Math.random() * tempLineIndex.length)];
-            tempLineIndex.splice(i2, 1);
+            if (tempLineIndex.length >= 1) {
+                let i2 = tempLineIndex[Math.floor(Math.random() * tempLineIndex.length)];
+                tempLineIndex.splice(i2, 1);
             //let letter1 = word[i1];
-            let letter2 = word[i2];
+                let letter2 = word[i2];
             //wordBank.linesArray[i1] = letter1;
-            for (let i = 0; i < word.length; i++) {
-                if (wordBank.answer[i] === letter2) {
-                    wordBank.linesArray[i] = letter2;
-                    letterGivenCounter += 1;
+                for (let i = 0; i < word.length; i++) {
+                    if (wordBank.answer[i] === letter2) {
+                        wordBank.linesArray[i] = letter2;
+                        letterGivenCounter += 1;
+                    }
                 }
+                buttons[letter2.charCodeAt(0)-65].disabled = true;
             }
-            buttons[letter2.charCodeAt(0)-65].disabled = true;
             updateAnswerBank();
             if (wordBank.checkWordComplete()) {
                 generateWord(category);
